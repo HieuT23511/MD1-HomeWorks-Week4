@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 2</title>
+</head>
+<body>
+<script src="js/array.js"></script>
+<script>
+    creatNewArray();
+    console.log(arr)
+    let targetSum = +prompt('Enter Value: ');
+    console.log(targetSum)
+    let result='';
+
+    for (let i = 0; i < arr.length-2; i++) {
+        for (let j = i+1; j < arr.length-1; j++) {
+            for (let k = j+1; k < arr.length; k++) {
+                if (+arr[i] + (+arr[j]) + (+arr[k]) === targetSum) {
+                    document.write(`${targetSum} is total of 3 Elements: ${arr[i]},${arr[j]},${arr[k]} <br>`);
+                }
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

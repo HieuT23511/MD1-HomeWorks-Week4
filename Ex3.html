@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 3</title>
+</head>
+<body>
+<script src="js/array.js"></script>
+<script>
+    creatNewArray();
+    let targetSum = +prompt('Enter Target Summary: ');
+    let min = arr.length;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i+1; j < arr.length; j++) {
+            if(+arr[i]+(+arr[j])===targetSum){
+            }
+                let distance = j-i;
+                if (distance < min){
+                    min = distance;
+                    result = [arr[i], arr[j]]
+            }
+        }
+    }
+    document.write(`in array [${arr}] co ${result} tong la ${targetSum} co khoang cach nho nhat <br>`);
+</script>
+</body>
+</html>

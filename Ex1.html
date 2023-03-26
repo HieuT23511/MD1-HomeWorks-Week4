@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 1</title>
+</head>
+<body>
+<script>
+    function func(x){
+        return x * x - x -1
+    }
+    document.write(`The initial function: x<sup>2</sup> - x - 1 <br>`)
+    let arr = []
+    for (let i = 0; i <= 10; i++) {
+        arr.push(i)
+    }
+    document.write(`The initial array is: ${arr}<br>`)
+    let max = func(arr[0])
+    for (let i = 1; i <= 10; i++) {
+        if(func(arr[i])>max){
+            max = func(arr[i])
+        }
+    }
+    document.write(`gia tri lon nhat cua ham so trong khoang da cho la ${max}<br>`)
+</script>
+</body>
+</html>

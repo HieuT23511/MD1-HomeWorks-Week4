@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 5</title>
+</head>
+<body>
+<script>
+    class NewArr {
+        constructor(arr) {
+            this.arr = arr;
+        }
+        getArr() {
+            return this.arr;
+        }
+        totalElements(){
+            let total = 0;
+            for (let i = 0; i < this.arr.length; i++) {
+                total += this.arr[i];
+            }
+            return total;
+        }
+    }
+
+    let arr1 = new NewArr([1,5,4,8,6]);
+    let arr2 = new NewArr([1,8,4,2,6]);
+    let arr3 = new NewArr([3,5,4,7,6]);
+    let arr4 = new NewArr([5,5,4,7,6]);
+    let sum_arr1 =  arr1.totalElements();
+    let sum_arr2 =  arr2.totalElements();
+    let sum_arr3 =  arr3.totalElements();
+    let sum_arr4 =  arr4.totalElements();
+
+    let max_sum = Math.max(sum_arr1, sum_arr2, sum_arr3, sum_arr4);
+    let new_arr = [arr1.getArr(), arr2.getArr(), arr3.getArr(), arr4.getArr()];
+    let new_sum_arr = [sum_arr1, sum_arr2, sum_arr3, sum_arr4];
+    let result = '';
+    for (let i = 0; i < new_sum_arr.length; i++) {
+        if (max_sum === new_sum_arr[i]) {
+            result += `[${new_arr[i]}]`;
+        }
+    }
+    console.log(result);
+</script>
+</body>
+</html>

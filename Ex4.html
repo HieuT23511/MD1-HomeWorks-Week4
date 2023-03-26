@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise4</title>
+</head>
+<body>
+<script src="js/array.js"></script>
+<script>
+    creatNewArray();
+    let arr_filter = arr.filter(function (value) {
+        if (arr.indexOf(value) === arr.lastIndexOf(value)) {
+            return value;
+        }
+    })
+    document.write(`Mảng vừa nhập là: [${arr}]<br><br>Phần tử duy nhất đầu tiên trong mảng là: ${arr_filter[0]}`);
+</script>
+</body>
+</html>
